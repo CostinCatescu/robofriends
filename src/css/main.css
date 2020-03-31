@@ -33,7 +33,7 @@ body {
     color:#728CB2;
     letter-spacing: 1rem;
 }
-.wrapper-container {
+.container-fluid {
     
     height: 100%;    
 }
@@ -72,7 +72,6 @@ input[type=text] {
     height:700px;
     /* position: relative; */
     /* bottom: 0; */
-    width: 90%;
     margin: 0 auto;
 }
 
@@ -120,9 +119,4 @@ hr {
     border:1px solid #1F3C68;
 }
 
-@media screen and (max-width: 728px) {
-    .scroller {
-      width: 100%;
-    }
-  }
 

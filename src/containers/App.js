@@ -49,7 +49,7 @@ class App extends React.Component {
       } else if (!isLoaded) {
         return <div>Loading...</div>;
       } else {
-        return (<div class="wrapper-container">
+        return (<div class="container-fluid">
                     <header className="header"><h1>ROBOLIST</h1></header>
                     <SearchBox searchChange={this.onSearchChange} />
                     <Scroller > 
