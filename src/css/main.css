@@ -119,4 +119,9 @@ hr {
     border:1px solid #1F3C68;
 }
 
+@media screen and (max-width: 728px) {
+    input[type=text] {
+        width: 95%;
+    }
+  }
 
