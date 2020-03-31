@@ -55,6 +55,8 @@ class App extends React.Component {
                     <Scroller > 
                         <CardList robots={ filteredRobots } />
                     </Scroller>
+                    <hr />
+                    <footer className="footer">Costin Catescu © 2020</footer>
                 </div>
         );
       }
