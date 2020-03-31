@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf3849ea39a2797e05362fd5fc61492f",
+    "revision": "7d17df2b7e3ccf74a4fbfd90ffe25e6d",
     "url": "/robofriends/index.html"
   },
   {
-    "revision": "614187ae84a12281e450",
-    "url": "/robofriends/static/css/main.c19823dc.chunk.css"
+    "revision": "33decbbebefbe5f01760",
+    "url": "/robofriends/static/css/main.041c711f.chunk.css"
   },
   {
     "revision": "8f98f7877a1ea2bea623",
@@ -16,12 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/robofriends/static/js/2.c2a50d6f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "614187ae84a12281e450",
-    "url": "/robofriends/static/js/main.ba22e597.chunk.js"
+    "revision": "33decbbebefbe5f01760",
+    "url": "/robofriends/static/js/main.e1af4f3a.chunk.js"
   },
   {
     "revision": "46690a7b9ddc777b3b4c",
     "url": "/robofriends/static/js/runtime-main.ba4515c0.js"
+  },
+  {
+    "revision": "236ae33bc630ce8e972a7bf55f9244fb",
+    "url": "/robofriends/static/media/SEGA-LOGO-FONT.ttf.236ae33b.svg"
   },
   {
     "revision": "3f5c9111609279eb69be9e1a8a10e82b",
@@ -30,9 +34,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "57ad6cb1828e85f5f029d166ac0361b8",
     "url": "/robofriends/static/media/SEGA-LOGO-FONT.ttf.57ad6cb1.eot"
-  },
-  {
-    "revision": "d7d67c411a56f01384056ff8a85eb4c6",
-    "url": "/robofriends/static/media/SEGA-LOGO-FONT.ttf.d7d67c41.svg"
   }
 ]);
