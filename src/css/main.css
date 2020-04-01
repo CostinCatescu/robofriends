@@ -76,7 +76,7 @@ input[type=text] {
 }
 
 .card {
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
     color: 1F3C68;
     background-color: #A2B6D3;
@@ -96,12 +96,19 @@ input[type=text] {
 }
 
 .card > h2 {
-    /* font-size: 3rem; */
     font-family: 'SEGA-LOGO-FONT';
     font-weight: 400;
     font-size: 1rem;
     color :black;
     padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.card > h3 {
+    font-weight: 400;
+    font-size: 1rem;
+    color :black;
+    /* padding-bottom: 8px; */
 }
 
 .footer {
@@ -110,6 +117,7 @@ input[type=text] {
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
+    font-weight: 400;
     height: 100px;
     padding-top: 30px;
 }
