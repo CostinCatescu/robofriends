@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {CardList, Scroller, SearchBox} from '../components';
+import {CardList, SearchBox} from '../components';
 import '../css/main.css';
 import { setSearchField } from '../actions';
 
@@ -54,9 +54,9 @@ class App extends React.Component {
           <div className="container-fluid">
             <header className="header"><h1>ROBOLIST</h1></header>
             <SearchBox searchChange={onSearchChange} />
-            <Scroller > 
+       
                 <CardList robots={ filteredRobots } />
-            </Scroller>
+        
             <hr />
             <footer className="footer">Costin Catescu © 2020</footer>
         </div>
