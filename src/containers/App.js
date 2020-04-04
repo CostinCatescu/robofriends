@@ -1,66 +1,53 @@
 import React from 'react';
-import {CardList, Scroller, SearchBox} from '../components';
+import { connect } from 'react-redux';
+import {CardList, SearchBox} from '../components';
 import '../css/main.css';
+import { setSearchField, requestRobots } from '../actions';
+
+const mapStateToProps = state =>  { 
+  return { 
+    searchField: state.searchRobots.searchField,
+    robots : state.requestRobots.robots,
+    isPending: state.requestRobots.isPending,
+    error: state.requestRobots.error
+  }
+};
+
+const mapDispatch = dispatch =>  { 
+  return {
+    onSearchChange: event => dispatch(setSearchField(event.target.value)) ,
+    onRequestRobots: () => dispatch(requestRobots())
+  } 
+};
+
 
 class App extends React.Component {
-    constructor() {
-      super();
-      this.state = {
-        error: null,
-        isLoaded: false,
-        items: [],
-        query : ''
-      };
-    }
-
-    onSearchChange = (event) => {
-        this.setState({
-            query: event.target.value
-        })
-    }
   
     componentDidMount() {
-      fetch(process.env.REACT_APP_JSON_PLACEHOLDER_URL)
-        .then(res => res.json())
-        .then(
-          (result) => {
-            this.setState({
-              isLoaded: true,
-              items: result
-            });
-          },
-          (error) => {
-            this.setState({
-              isLoaded: true,
-              error
-            });
-          }
-        )
+      this.props.onRequestRobots();
     }
   
     render() {
-        
-      const filteredRobots = this.state.items.filter( robot => {
-        return robot.name.toLowerCase().includes(this.state.query.toLowerCase())
+      const { searchField, onSearchChange, robots, error, isPending} = this.props;  
+      const filteredRobots = robots.filter( robot => {
+        return robot.name.toLowerCase().includes(searchField.toLowerCase())
       })
-      const { error, isLoaded } = this.state;
       if (error) {
         return <div>Error: {error.message}</div>;
-      } else if (!isLoaded) {
+      } else if (isPending) {
         return <div>Loading...</div>;
       } else {
-        return (<div class="container-fluid">
-                    <header className="header"><h1>ROBOLIST</h1></header>
-                    <SearchBox searchChange={this.onSearchChange} />
-                    <Scroller > 
-                        <CardList robots={ filteredRobots } />
-                    </Scroller>
-                    <hr />
-                    <footer className="footer">Costin Catescu © 2020</footer>
-                </div>
+        return (
+          <div className="container-fluid">
+            <header className="header"><h1>ROBOLIST</h1></header>
+            <SearchBox searchChange={onSearchChange} />
+                <CardList robots={ filteredRobots } />
+            <hr />
+            <footer className="footer">Costin Catescu © 2020</footer>
+        </div>
         );
       }
     }
 }
 
-  export default App;
+  export default connect(mapStateToProps, mapDispatch)(App);
