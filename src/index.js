@@ -4,13 +4,13 @@ import { Provider} from 'react-redux';
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import {App} from './containers';
 import * as serviceWorker from './serviceWorker';
-import { searchRobots, requestRobots } from './reducers';
+import { searchRobots, requestApiData } from './reducers';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from "redux-thunk";
 
 const logger = createLogger();
 
-const rootReducer = combineReducers( {searchRobots, requestRobots});
+const rootReducer = combineReducers( {searchRobots, requestApiData});
 const store = createStore(rootReducer, 
     
     applyMiddleware(thunkMiddleware, logger)

@@ -1,7 +1,7 @@
 import {    CHANGE_SEARCH_FIELD, 
-            REQUEST_ROBOTS_PENDING,
-            REQUEST_ROBOTS_SUCCESS,
-            REQUEST_ROBOTS_FAILED,
+            REQUEST_API_DATA_PENDING,
+            REQUEST_API_DATA_SUCCESS,
+            REQUEST_API_DATA_FAILED,
 
         } from './constants';
 
@@ -10,10 +10,10 @@ export const setSearchField = (text) => ({
     payload: text
 })
 
-export const requestRobots = () => (dispatch) => {
-    dispatch({ type : REQUEST_ROBOTS_PENDING});
-    fetch(process.env.REACT_APP_JSON_PLACEHOLDER_URL)
+export const requestApiData = (url) => (dispatch) => {
+    dispatch({ type : REQUEST_API_DATA_PENDING});
+    fetch(url)
         .then(res => res.json())
-        .then( data => dispatch({ type: REQUEST_ROBOTS_SUCCESS, payload: data }))
-        .catch( error => dispatch({ type : REQUEST_ROBOTS_FAILED,payload: error }))
+        .then( data => dispatch({ type: REQUEST_API_DATA_SUCCESS, payload: data }))
+        .catch( error => dispatch({ type : REQUEST_API_DATA_FAILED,payload: error }))
 }
