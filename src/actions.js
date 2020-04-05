@@ -14,6 +14,22 @@ export const requestApiData = (url) => (dispatch) => {
     dispatch({ type : REQUEST_API_DATA_PENDING});
     fetch(url)
         .then(res => res.json())
+        .then( res => {
+                res.unshift({
+                    "id": 11,
+                    "name": "Costin Catescu",
+                    "username": "Costin",
+                    "email": "costin@example.com",
+                }, 
+                { 
+                    "id": 12,
+                    "name": "Cristian Ionescu",
+                    "username": "Cristi",
+                    "email": "Ionescucristianstefan@gmail.com",
+                }
+            )
+            return res
+        })
         .then( data => dispatch({ type: REQUEST_API_DATA_SUCCESS, payload: data }))
         .catch( error => dispatch({ type : REQUEST_API_DATA_FAILED,payload: error }))
 }
