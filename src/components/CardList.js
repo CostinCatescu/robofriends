@@ -8,6 +8,12 @@ const CardList = ({robots, searchItems}) => {
         "name": "Costin Catescu",
         "username": "Costin",
         "email": "costin.catescu@gmail.com",
+        },
+        { 
+            "id": 12,
+            "name": "Cristian Ionescu",
+            "username": "Cristi",
+            "email": "Ionescucristianstefan@gmail.com",
         }
     );
 
