@@ -25,7 +25,7 @@ export const requestApiData = (url) => (dispatch) => {
                     "id": 12,
                     "name": "Cristian Ionescu",
                     "username": "Cristi",
-                    "email": "Ionescucristianstefan@gmail.com",
+                    "email": "cristianstefan@example.com",
                 }
             )
             return res
