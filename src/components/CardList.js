@@ -4,10 +4,10 @@ import Card from './Card';
 const CardList = ({robots, searchItems}) => {
 
     robots.unshift({ 
-        "id": 11,
-        "name": "Costin Catescu",
-        "username": "Costin",
-        "email": "costin.catescu@gmail.com",
+            "id": 11,
+            "name": "Costin Catescu",
+            "username": "Costin",
+            "email": "costin.catescu@gmail.com",
         },
         { 
             "id": 12,
