@@ -3,6 +3,18 @@ import { connect } from 'react-redux';
 import {CardList, SearchBox} from '../components';
 import '../css/main.css';
 import { setSearchField, requestApiData } from '../actions';
+import Particles from 'react-particles-js';
+const particlesOptions = {
+  particles: {
+      number: {
+        value: 120,
+        density: {
+          enable: true, 
+          value_area:800 
+        }
+      }
+  }
+};
 
 const mapStateToProps = state =>  { 
   return { 
@@ -38,6 +50,7 @@ class App extends React.Component {
       } else {
         return (
           <div className="container-fluid">
+            <Particles className="particles" params={particlesOptions} />
             <header className="header"><h1>ROBOLIST</h1></header>
             <SearchBox searchChange={onSearchChange} />
                 <CardList robots={ filteredRobots } />

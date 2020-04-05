@@ -23,6 +23,15 @@ html #root {
 body {
     background: linear-gradient(90deg, rgba(87,89,160,1) 0%, rgba(48,9,121,1) 100%, rgba(78,107,151,1) 100%);
 }
+
+.particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
 .header{
     font-size: 2rem;
     font-family: 'SEGA-LOGO-FONT';
